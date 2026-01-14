@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #0f2027, #203a43, #000);
+}
+
+/* CONTENEDOR */
+.login-container {
+  padding: 20px;
+}
+
+/* CAJA LOGIN */
+.login-box {
+  width: 100%;
+  max-width: 360px;
+  background: rgba(20, 30, 40, 0.95);
+  border-radius: 22px;
+  padding: 30px 25px;
+  box-shadow:
+    0 0 15px #00f2ff,
+    0 0 40px rgba(0, 242, 255, 0.3);
+  border: 2px solid rgba(0, 242, 255, 0.6);
+}
+
+/* AVATAR */
+.avatar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.avatar img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 8px;
+  box-shadow: 0 0 18px rgba(0, 242, 255, 0.7);
+}
+
+/* TEXTO BIENVENIDA */
+.welcome {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 22px;
+  letter-spacing: 1px;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: entrada 1.5s ease forwards;
+}
+
+.welcome span {
+  text-decoration: underline;
+  color: #00f2ff;
+}
+
+/* ANIMACIÓN */
+@keyframes entrada {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* INPUTS */
+form input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 15px;
+}
+
+/* CONTRASEÑA */
+.password-box {
+  position: relative;
+}
+
+.password-box .eye {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  cursor: default;
+}
+
+/* BOTÓN */
+button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 16px;
+  border: none;
+  background: transparent;
+  color: #00f2ff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow:
+    inset 0 0 0 2px #00f2ff,
+    0 0 15px rgba(0, 242, 255, 0.6);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #00f2ff;
+  color: #000;
+  box-shadow:
+    0 0 25px #00f2ff,
+    0 0 45px rgba(0, 242, 255, 0.8);
+}
+
+/* RESPONSIVE */
+@media (max-width: 400px) {
+  .login-box {
+    padding: 25px 20px;
+  }
+}
